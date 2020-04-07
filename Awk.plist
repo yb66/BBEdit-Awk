@@ -93,23 +93,6 @@
 		<string>A-Za-z0-9_</string>
 
     <key>BBLMScansFunctions</key><true/>
-    <key>Function Pattern</key>
-    <string><![CDATA[
-      (?x: 
-        (?>function[^\S]+)(?>\w+[^\S]*\()
-        (?P<args>\s*(?:(?:\[\w+\])|\w+)?\s*(?:,(?&args))?)
-        \)
-        (?P<funcbody>
-        \s*\{
-            (?:
-              [^}{]+
-               |
-              (?&funcbody)
-            )*+
-          \}
-        )
-      )
-    ]]></string>
 
     <key>String Pattern</key>
     <string>(?x:
